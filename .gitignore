@@ -1,4 +1,1 @@
-Backend/venv/
-Backend/.env
-Backend/data/chroma_db/
 .cursor/
