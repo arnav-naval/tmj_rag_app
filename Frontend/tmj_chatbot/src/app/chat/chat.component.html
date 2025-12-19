@@ -1,0 +1,31 @@
+<div class="chat-container">
+  <div class="messages-container" #messagesContainer>
+    @for (message of messages(); track message.timestamp) {
+      <div class="message" [class.user-message]="message.sender === 'user'" [class.bot-message]="message.sender === 'bot'">
+        <div class="message-bubble">
+          <p class="message-text">{{ message.text }}</p>
+          <span class="message-time">{{ message.timestamp | date:'short' }}</span>
+        </div>
+      </div>
+    }
+  </div>
+  
+  <div class="input-area">
+    <input
+      type="text"
+      class="message-input"
+      [value]="inputText()"
+      (input)="onInputChange($event)"
+      (keydown.enter)="sendMessage()"
+      placeholder="Type your message..."
+    />
+    <button
+      class="send-button"
+      (click)="sendMessage()"
+      [disabled]="!inputText().trim()"
+    >
+      Send
+    </button>
+  </div>
+</div>
+
