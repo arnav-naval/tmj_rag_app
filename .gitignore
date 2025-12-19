@@ -1,3 +1,3 @@
-venv/
-.env
-data/chroma_db/
+Backend/venv/
+Backend/.env
+Backend/data/chroma_db/
