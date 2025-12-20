@@ -1,14 +1,14 @@
 import { Routes } from '@angular/router';
-import { ChatComponent } from './chat/chat.component';
+import { AppComponent } from './app.component';
+import { ChatHeaderComponent } from './chat/chat-header/chat-header.component';
 
 export const routes: Routes = [
   {
-    path: 'chat',
-    component: ChatComponent
+    path: '',
+    component: AppComponent
   },
   {
-    path: '',
-    redirectTo: '/chat',
-    pathMatch: 'full'
-  }
+    path: 'chat',
+    component: ChatHeaderComponent
+  },
 ];
