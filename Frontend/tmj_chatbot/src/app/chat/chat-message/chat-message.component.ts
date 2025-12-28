@@ -8,5 +8,5 @@ import { Component, input } from '@angular/core';
 })
 export class ChatMessageComponent {
   message = input.required<string>();
-  
+  isUser = input.required<boolean>();
 }

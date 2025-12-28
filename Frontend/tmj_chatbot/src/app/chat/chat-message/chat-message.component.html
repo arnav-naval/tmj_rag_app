@@ -1,5 +1,9 @@
-<div class="w-full flex">
-    <div class="chat-bubble whitespace-pre-wrap break-words">
+<div 
+  class="chat"
+  [class.chat-start]="!isUser()"
+  [class.chat-end]="isUser()"
+>
+    <div class="chat-bubble">
         {{ message() }}
     </div>
 </div>
