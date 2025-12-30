@@ -1,26 +1,35 @@
 <div
   #scrollContainer
-  class="flex-1 overflow-y-auto px-4 py-4 space-y-3 bg-base-100"
+  class="h-full overflow-y-auto bg-gradient-to-b from-base-100 to-base-200"
 >
+  <div class="max-w-4xl mx-auto px-4 py-6">
     @if (messages().length === 0) {
-        <div class="h-full flex items-center justify-center">
-        <div class="text-center max-w-sm">
-            <div class="text-lg font-semibold text-base-content">No messages yet</div>
-            <div class="text-sm text-base-content/60 mt-1">
-            Send a message to start the conversation.
+      <div class="h-full flex items-center justify-center min-h-[60vh]">
+        <div class="text-center max-w-md space-y-4">
+          <div class="flex justify-center">
+            <div class="w-20 h-20 rounded-full bg-primary/10 flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-10 text-primary">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-2 2.1a2.1 2.1 0 0 1-2.1-2.1v-4.286c0-.969.616-1.813 1.5-2.097m0 0V5.25A2.25 2.25 0 0 0 18.75 3h-1.5A2.25 2.25 0 0 0 15 5.25v3.261m0 0V12a2.25 2.25 0 0 0 2.25 2.25h3.75m-3.75 0a2.25 2.25 0 0 1-2.25-2.25V8.511m0 0c.884-.284 1.5-1.128 1.5-2.097V4.286c0-1.136-.847-2.1-2-2.1s-2 .964-2 2.1v4.286c0 .969.616 1.813 1.5 2.097m-6 0V5.25A2.25 2.25 0 0 0 6.75 3h-1.5A2.25 2.25 0 0 0 3 5.25v3.261c.884-.284 1.5-1.128 1.5-2.097V4.286c0-1.136-.847-2.1-2-2.1s-2 .964-2 2.1v4.286c0 .969.616 1.813 1.5 2.097m0 0V12a2.25 2.25 0 0 0 2.25 2.25h3.75m-3.75 0a2.25 2.25 0 0 1-2.25-2.25V8.511Z" />
+              </svg>
             </div>
-            <div class="mt-4">
-            <span class="badge badge-outline">MVP</span>
-            </div>
+          </div>
+          <div>
+            <h3 class="text-2xl font-bold text-base-content mb-2">No messages yet</h3>
+            <p class="text-base-content/70 text-sm leading-relaxed">
+              Send a message to start the conversation. I'm here to help you with any questions you might have.
+            </p>
+          </div>
         </div>
-        </div>
+      </div>
     } @else {
+      <div class="space-y-4">
         @for (msg of messages(); track $index) {
-            <app-chat-message
-                [message]="msg.content"
-                [isUser]="msg.role === 'user'"
-            />
+          <app-chat-message
+            [message]="msg.content"
+            [isUser]="msg.role === 'user'"
+          />
         }
+      </div>
     }
-
+  </div>
 </div>
