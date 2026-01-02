@@ -52,7 +52,7 @@ tmj_rag_app/
 │   ├── notebooks/
 │   │   └── ingestion.ipynb   # Jupyter notebook for data ingestion
 │   ├── data/
-│   │   ├── pdfs/             # Source PDF documents (11 files)
+│   │   ├── pdfs/             # Source PDF documents
 │   │   └── chroma_db/        # ChromaDB vector database
 │   ├── requirements.txt      # Python dependencies
 │   └── venv/                 # Python virtual environment
@@ -193,18 +193,13 @@ The production build will be in `dist/tmj_chatbot/`
 - Enhanced document management interface
 - Citation and source links in responses
 
-## 📝 License
-
-[Specify your license here]
-
 ## 🤝 Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## 📧 Contact
 
-[Add contact information or project maintainer details]
-
+Arnav Naval - arnav.naval@gmail.com
 ---
 
 **Note**: This project is designed for educational and informational purposes. Always consult healthcare professionals for medical advice and treatment.
