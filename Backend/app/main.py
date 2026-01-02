@@ -1,8 +1,6 @@
 from fastapi import FastAPI
+from api import chat
 
 app = FastAPI()
 
-
-@app.get("/")
-async def root():
-    return {"message": "Hello World"}
+app.include_router(chat.router, prefix="/chat")
