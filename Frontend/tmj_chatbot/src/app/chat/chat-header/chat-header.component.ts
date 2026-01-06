@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { ChatService } from '../../services/chat.service';
 
 @Component({
   selector: 'app-chat-header',
@@ -7,5 +8,10 @@ import { Component } from '@angular/core';
   styleUrl: './chat-header.component.css'
 })
 export class ChatHeaderComponent {
+  chatService = inject(ChatService);
+
+  clearChat() {
+    this.chatService.resetMessages();
+  }
 
 }
