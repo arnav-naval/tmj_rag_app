@@ -1,6 +1,5 @@
-import { Component, inject, input, signal } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { ChatMessageComponent } from '../chat-message/chat-message.component';
-import { ChatMessage } from '../../models/chat_model';
 import { ChatService } from '../../services/chat.service';
 
 @Component({
