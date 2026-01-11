@@ -18,7 +18,7 @@ export class ChatInputComponent {
 
     const text = this.messageControl.value!;
     console.log('Sending via reactive form:', text);
-    this.chatService.sendMessage(text.trim());
+    this.chatService.chatWithAssistant(text.trim());
     this.messageControl.reset();
   }
 

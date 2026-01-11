@@ -10,6 +10,6 @@ export class ChatApi {
   private http = inject(HttpClient);
 
   chat(body: ChatRequest): Observable<ChatResponse> {
-    return this.http.post<ChatResponse>('/api/chat', body);
+    return this.http.post<ChatResponse>('http://localhost:8000/chat', body);
   }
 }
